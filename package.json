@@ -1,0 +1,21 @@
+{
+  "name": "git-hooks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check-branch-name": "chmod 755 ./hooks/pre-commit-asksuite.sh && bash ./hooks/pre-commit-asksuite.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^4.3.8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run check-branch-name"
+    }
+  }
+}
